@@ -7,6 +7,9 @@ import './globals.css';
 
 import { cn } from '@/lib/utils';
 import Footer from '@/components/footer';
+import MouseProvider from '@/components/mouse-provider';
+import Nav from '@/components/nav';
+import { TailwindIndicator } from '@/components/tailwind-indicator';
 
 export const metadata = globalMetadata;
 
@@ -27,9 +30,12 @@ export default function RootLayout({
       <head />
       <body>
         <Providers>
+          <Nav />
           <main>{children}</main>
           <Footer />
         </Providers>
+        <MouseProvider />
+        <TailwindIndicator />
       </body>
     </html>
   );
