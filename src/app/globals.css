@@ -3,11 +3,42 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --magic-border-from: 0 0% 70%;
+    --magic-border-to: 0 0% 90%;
+    --magic-border-hl: 0 0% 40%;
+    --magic-bg-from: 0 0% 88%;
+    --magic-bg-to: 0 0% 94%;
+    --magic-bg-hl: 0 0% 0%;
+    --magic-radius: 1rem;
+  }
+
+  .dark {
+    --magic-border-from: 0 0% 30%;
+    --magic-border-to: 0 0% 10%;
+    --magic-border-hl: 0 0% 60%;
+    --magic-bg-from: 0 0% 12%;
+    --magic-bg-to: 0 0% 6%;
+    --magic-bg-hl: 0 0% 100%;
+    --magic-radius: 1rem;
+  }
+
   html {
     @apply antialiased;
     /* font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11' off; */
   }
   body {
     @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100;
+  }
+}
+
+@layer utilities {
+  .padding-mask {
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    mask-composite: xor;
+    padding: 1px;
   }
 }

@@ -21,7 +21,7 @@ export default function Wrapper({
       <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl border border-dashed border-gray-500/20 p-10">
         <div className="relative z-10">{children}</div>
 
-        <div className="absolute inset-0 opacity-5 [background-size:400px_400px] [background:url(/grid-pattern.png)]" />
+        <div className="absolute inset-0 opacity-10 [background-size:500px] [background:url(/grid-pattern.png)]" />
       </div>
     </div>
   );
